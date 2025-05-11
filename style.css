@@ -1,0 +1,53 @@
+.bg-conic-wrapper {
+  position: relative;
+  width: 24rem; /* 96 units or 24rem */
+  height: 24rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure nothing bleeds outside the circle */
+}
+
+/* Rotating background */
+.bg-conic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: conic-gradient(
+    from 45deg,
+    #3ba420a1,
+    #1a2f69a1,
+    #60739b,
+    #491841,
+    #b2b8b2,
+    #32b811a1
+  );
+  border-radius: 50%;
+  animation: rotate-gradient 5s linear infinite;
+}
+
+.bg-conic-wrapper img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+@keyframes rotate-gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.glow-button.active {
+  box-shadow: 0 0 12px rgba(255, 0, 128, 0.6), 0 0 24px rgba(128, 0, 255, 0.4);
+}

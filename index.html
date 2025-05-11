@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Rashid Mirdha | Web Developer</title>
+    <link class="" rel="shortcut icon" href="Tlogo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+    <style>
+      .glow-button {
+      position: relative;
+      background: none;
+      border: none;
+      padding: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .underline {
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(to right, #f472b6, #8b5cf6);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    </style>
+  <body
+    class="bg-gradient-to-tl from-[#252f3d] via-[#111c2f] to-[#0d1438] justify-center items-center min-h-screen bg-fixed text-black "
+  > 
+    <header
+      class="fixed top-0 w-full h-20 bg-gradient- tl from-[#1a202c] via-[#1a2944] lg:px-10 to-[#202b65] bg-transparent flex items-center justify-between text-white backdrop-blur-lg bg-opacity-10 dark:bg-gradient-to-r dark:from-gray-100 dark:via-gray-200 dark:to-gray-300 dark:text-black z-50"
+    >
+      <div class="flex items-center justify-between px-[40px] w-full">
+        <!-- Logo Section -->
+        <div class="left">
+          <h1
+            class="text-3xl font-Oswald font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F2F9FF] via-[#CB9DF0] to-[#D9EAFD] dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black"
+          >
+            Rashid Mirdha
+          </h1>
+        </div>
+        <div class="mid text-2xl hidden md:flex">
+          <ul class="flex space-x-6 text-2xl">
+            <button class="glow-button" data-target="home" onclick="navigate(this)">
+          Home
+          <div class="underline"></div>
+        </button>
+        <button
+          class="glow-button"
+          data-target="about"
+          onclick="navigate(this)"
+        >
+          About
+          <div class="underline"></div>
+        </button>
+        <button
+          class="glow-button"
+          data-target="skills"
+          onclick="navigate(this)"
+        >
+          Skills
+          <div class="underline"></div>
+        </button>
+        <button
+          class="glow-button"
+          data-target="contact"
+          onclick="navigate(this)"
+        >
+          Contact
+          <div class="underline"></div>
+        </button>
+          </ul>
+        </div>
+
+        <div class="flex items-center space-x-4">
+        <img src="rm logo.png" alt="Logo" class="h-12 hidden lg:block" />
+        <i
+          id="menu-icon"
+          class="fas fa-bars text-2xl cursor-pointer md:hidden"
+        ></i>
+      </div>
+    </header>
+    <div
+      id="sidebar"
+      class="fixed right-0 top-0 h-full w-24 bg-transparent text-white transform transition-transform duration-300 z-40"
+    >
+      <ul class="flex flex-col mt-20 space-y-2 px-4">
+        <button
+          class="glow-button text-left"
+          data-target="home"
+          onclick="navigate(this)"
+        >
+          Home
+          <div class="underline"></div>
+        </button>
+        <button
+          class="glow-button text-left"
+          data-target="about"
+          onclick="navigate(this)"
+        >
+          About
+          <div class="underline"></div>
+        </button>
+        <button
+          class="glow-button text-left"
+          data-target="skills"
+          onclick="navigate(this)"
+        >
+          Skills
+          <div class="underline"></div>
+        </button>
+        <button
+          class="glow-button text-left"
+          data-target="contact"
+          onclick="navigate(this)"
+        >
+          Contact
+          <div class="underline"></div>
+        </button>
+      </ul>
+    </div>
+  
+<div class="main h-screen text-white">
+    <section
+      id="home"
+      
+    >
+      <div
+        class="home flex flex-col sm:flex-row justify-between items-center px-[80px] sm:px-[80px] gap-10 "
+      >
+        <!-- Text Section (appears below image in mobile, on left side in larger screens) -->
+        <div
+          class="left text-left flex flex-col justify-center items-center sm:h-screen text-white order-2 sm:order-none"
+        >
+          <h2 class="text-3xl text-green-300 font-semibold">
+            Hey Here <span class="text-teal-200">It's</span>
+          </h2>
+          <h1
+            class="text-4xl sm:text-5xl bg-gradient-to-r my-2 from-[#0A97B0] via-[#A59D84] to-[#0A97B0] bg-clip-text text-transparent font-Oswald font-extrabold"
+          >
+            Rashid Mirdha
+          </h1>
+          <h3
+            class="text-xl sm:text-2xl bg-gradient-to-r from-purple-200 to-[#af7ce6e1] font-bold bg-clip-text text-transparent"
+          >
+            Full Stack Developer
+          </h3>
+
+          <div class="del h-8">
+            <p class="text-lg">
+              <span
+                id="typed-text"
+                class="bg-gradient-to-r from-purple-400 via-[#CDC1FF] to-[#FFCF9D] font-bold bg-clip-text text-transparent"
+              ></span>
+            </p>
+          </div>
+
+          <p class="text-md sm:text-lg text-[#C6E7FF] leading-loose">
+            <span class="text-[#EFB6C8] text-lg">
+              Thank You For Visiting My Site
+            </span>
+            .I Am Passionate About
+            <span class="text-[#81BFDA] text-lg">Coding</span>
+            , <span class="text-[#0A97B0] text-lg">Designing</span> And Solving
+            Problems With
+            <span class="text-[#F5F0CD] text-lg">Clean Code</span>.
+            <br />
+            Desired To Gain And Utilize Knowledge.
+            <span class="text-[#8EA3A6] text-lg"
+              >I Just Love To Give My Best To Design And Perform The Best For
+              You</span
+            >. <br />
+            Always Ready To serve As Per Your Requirements -
+            <span class="text-[#EEE2B5] text-lg">Web & App</span>. Hope You Will
+            Enjoy This Journey With Me.
+          </p>
+        </div>
+
+        <!-- Image Section (appears on top in mobile, on right side in larger screens) -->
+        <div class="right order-1 sm:order-none">
+          <div
+            class="bg-conic-wrapper relative flex justify-center items-center mt-24 w-60 h-60 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden"
+          >
+            <div class="bg-conic absolute inset-0"></div>
+            <img
+              class="bg-conic-wrapper p-3 z-[1] transition-transform duration-300 transform hover:scale-110 w-full h-full object-cover"
+              src="Rashid.jpg"
+              alt="Rashid Mirdha"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="about"
+      
+    >
+      <div
+        class="about flex flex-col-reverse lg:flex-row items-center justify-center gap-20 sm:px-[40px] mt-2 md:px-[60px] lg:px-[80px] text-white h-auto lg:h-screen"
+      >
+        <div
+          class="left text-left text-transparent bg-clip-text bg-gradient-to-r px-[80px] from-[#FFE6A9] via-[#D76C82] to-[#FAB12F] lg:text-left"
+        >
+          <h2 class="text-4xl font-bold text-[#FFE6A9]">
+            About <span class="text-[#78B3CE]">Me</span>
+          </h2>
+          <h4 class="text-lg my-3">
+            I have completed my graduation in
+            <span class="text-[#FBFBFB]">Computer Science</span> from PDUAM,
+            Dalgaon.
+          </h4>
+          <h4 class="text-lg my-3">
+            Learned
+            <span class="text-[#CBDCEB]">Web & Application</span> Development
+            from Pen Programmer.
+          </h4>
+          <h4 class="text-xl my-3">
+            Always ready to
+            <span class="text-[#9B7EBD]">work and learn</span> new things. As it
+            increases my <span class="text-[#FFBD73]">knowledge</span> and helps
+            me to <span class="text-[#8ABFA3]">gain</span> a lot of
+            <span class="text-[#FFE6A5]">experience</span>.
+          </h4>
+          <h4 class="text-lg my-3">
+            Passionate about
+            <span class="text-[#77CDFF]"
+              >creating websites and applications</span
+            >.
+          </h4>
+          <h4 class="text-lg my-3">
+            Interested in learning from online platforms like
+            <span class="text-[#BCF2F6]">ChatGPT, Google, AI, YouTube,</span>
+            etc. To upgrade myself with updating skills.
+          </h4>
+        </div>
+
+        <div class="right order-last lg:order-first mt-2 sm:mt-0">
+          <img
+            src="laptoppng.html.png"
+            alt="Laptop Image"
+            class="mix-blend-screen object-contain filter w-full sm:w-5/6 md:w-4/5 lg:w-full"
+            data-tilt
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      id="skills"
+    >
+      <div class="skills px-[80px]">
+        
+        <h2
+          class="text-4xl font-semibold mt-5 mb-12 text-transparent bg-clip-text bg-gradient-to-r from-[#CDC1FF] via-[#F5EFFF] to-[#E5D9F2]"
+        >
+          Frontend Development
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 mb-10">
+          <div class="text-center my-4">
+            <img
+              src="https://www.imdos.in/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fimdos%2F65adfea538f662e9dd211ed2_html.png%3Fauto%3Dformat%2Ccompress%3Fauto%3Dcompress%2Cformat&w=128&q=75"
+              alt="html"
+              class="mx-auto mb-2"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">HTML</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Professional</h4>
+          </div>
+
+          <div class="text-center my-4">
+            <img
+              src="https://www.imdos.in/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fimdos%2F65adfea338f662e9dd211ed0_css.png%3Fauto%3Dformat%2Ccompress%3Fauto%3Dcompress%2Cformat&w=128&q=75"
+              alt="css"
+              class="mx-auto mb-2"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">CSS</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Intermediate</h4>
+          </div>
+          <div class="text-center my-4">
+            <img
+              src="https://www.imdos.in/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fimdos%2F65adfead38f662e9dd211eda_tailwind.png%3Fauto%3Dformat%2Ccompress%3Fauto%3Dcompress%2Cformat&w=128&q=75"
+              alt="tailwind"
+              class="mx-auto mb-2"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">Tailwind</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Professional</h4>
+          </div>
+
+          <div class="text-center my-4">
+            <img
+              src="https://www.imdos.in/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fimdos%2F65adfea638f662e9dd211ed3_javascript.png%3Fauto%3Dformat%2Ccompress%3Fauto%3Dcompress%2Cformat&w=128&q=75"
+              alt="javascript"
+              class="mx-auto mb-2"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">JavaScript</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Professional</h4>
+          </div>
+
+          <div class="text-center mt-[-20px]">
+            <img src="nextjs.png.png" alt="next" class="mx-auto ml-[-32px] min-w-36 lg:mb-[-30px] sm:mb-[-20px]" />
+
+            <h3 class="font-medium text-[#D9EAFD] lg:mr-24 mt-[-4px] ">Next JS</h3>
+            <h4 class="text-sm text-[#ECEBDE] lg:mr-24 mt-[4px]">Basics</h4>
+          </div>
+          
+          
+        </div>
+
+        <h2
+          class="text-4xl font-semibold mt-5 mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#CDC1FF] via-[#F5EFFF] to-[#E5D9F2]"
+        >
+          Backend Development & Software
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 mb-5">
+          <div class="text-center my-4">
+            <img
+              src="https://www.imdos.in/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fimdos%2F65adfeaa38f662e9dd211ed7_php.png%3Fauto%3Dformat%2Ccompress%3Fauto%3Dcompress%2Cformat&w=128&q=75"
+              alt="php"
+              class="mx-auto mb-2"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">PHP</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Professional</h4>
+          </div>
+
+          <div class="text-center my-4">
+            <img
+              src="https://www.imdos.in/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fimdos%2F70827e09-65a9-4793-9d7e-80e4fcdf266e_nodejs.png%3Fauto%3Dformat%2Ccompress%3Fauto%3Dcompress%2Cformat&w=128&q=75"
+              alt="nodejs"
+              class="mx-auto mb-2"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">Node JS</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Intermediate</h4>
+          </div>
+
+          <div class="text-center my-4">
+            <img
+              src="https://www.imdos.in/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fimdos%2F65adfea938f662e9dd211ed6_mysql.png%3Fauto%3Dformat%2Ccompress%3Fauto%3Dcompress%2Cformat&w=128&q=75"
+              alt="MySQL"
+              class="mx-auto mb-2"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">MySQL</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Intermediate</h4>
+          </div>
+
+          <div class="text-center my-4">
+            <img
+              src="https://www.imdos.in/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fimdos%2F65adfea438f662e9dd211ed1_github.png%3Fauto%3Dformat%2Ccompress%3Fauto%3Dcompress%2Cformat&w=128&q=75"
+              alt="github"
+              class="mx-auto mb-2"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">GitHub</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Intermediate</h4>
+          </div>
+
+          <div class="text-center">
+            <img
+              src="canva.png"
+              alt="canva"
+              class="mx-auto max-h-32 mb-2 mix-blend-screen"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">Canva</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Intermediate</h4>
+          </div>
+
+          <div class="text-center my-4">
+            <img
+              src="vscode.png.png"
+              alt="vscode"
+              class="mx-auto max-h-32 mix-blend-screen"
+            />
+            <h3 class="font-medium text-[#D9EAFD]">Visual Studio Code</h3>
+            <h4 class="text-sm text-[#ECEBDE]">Professional</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="contact"
+      
+    >
+      <div
+        class="Contact flex flex-col lg:flex-row justify-between mt-4 px-[80px] h-auto lg:h-screen items-center"
+      >
+        <!-- Text content -->
+        <div class="text w-full mt-28 sm:w-2/3 lg:w-1/2">
+          <!-- Contact Heading -->
+          <h1
+            class="text-4xl font-semibold mt-5 mb-12 text-transparent bg-clip-text bg-gradient-to-r from-[#D39D55] via-[#FF748B] to-[#FF748B]"
+          >
+            Contact
+          </h1>
+
+          <h2
+            class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-[#FF6347] via-[#FFE893] to-[#1E90FF] font-semibold mb-4"
+          >
+            Contact me or Hire me
+          </h2>
+
+          <h2
+            class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-[#FF6347] via-[#FFE893] to-[#1E90FF] font-semibold mb-4"
+          >
+            Interested in freelancing and Ready to be Hired
+          </h2>
+
+          <h1
+            class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-[#FF6347] via-[#FFE893] to-[#1E90FF] font-semibold"
+          >
+            Ready to work. You can contact me for your website and applications.
+          </h1>
+
+          <!-- Logos Section -->
+          <div class="logo flex flex-wrap gap-2 justify-start mt-10">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <a href="mailto:rashidmirdha143@gmail.com">
+                <img
+                  src="email.png.png"
+                  alt="email"
+                  class="max-h-24 rotate-[-30deg] transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-4"
+                />
+              </a>
+
+              <a href="https://wa.me/9678747607" target="_blank">
+                <img
+                  src="whatsapp.png.png"
+                  alt="whatsapp"
+                  class="max-h-28 rotate-[20deg] transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-4"
+                />
+              </a>
+
+              <a href="tel:9678747607">
+                <img
+                  src="phone.png.png"
+                  alt="phone"
+                  class="max-h-24 rotate-[25deg] transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-4"
+                />
+              </a>
+
+              <a href="https://www.instagram.com/rashid_mirdha" target="_blank">
+                <img
+                  src="insta.png.png"
+                  alt="instagram"
+                  class="max-h-28 transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-4"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        
+     <!-- Form Section -->
+
+      <div class="flex items-center justify-center w-full sm:w-2/3 lg:w-1/3 lg:mt-0">
+        <div class="bg-gradient-to-tl from-[#252f3d] to-[#101630] bg-opacity-20 backdrop-blur-2xl rounded-xl shadow-xl w-full max-w-sm p-8 mt-10 mb-10 hover:scale-110 duration-700">
+            <form id="contactForm">
+                <h1 class="text-4xl text-center font-semibold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#FF6347] via-[#F8FAFC] to-[#D9EAFD]">
+                    Contact
+                </h1>
+
+                <!-- Name Input -->
+                <div class="mb-2">
+                    <label for="name" class="block text-lg text-white font-semibold mb-2">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="from_name"
+                        placeholder="Enter Your Name"
+                        required
+                        class="w-full hover:scale-105 hover:backdrop-blur-3xl transition-all duration-300 p-3 bg-transparent bg-opacity-10 border border-gray-300 rounded-md text-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                </div>
+
+                <!-- Email Input -->
+                <div class="mb-2">
+                    <label for="email" class="block text-lg text-white font-semibold mb-2">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="from_email"
+                        placeholder="Enter Your Email"
+                        required
+                        class="w-full hover:scale-105 hover:backdrop-blur-3xl transition-all duration-300 p-3 bg-transparent bg-opacity-10 border border-gray-300 rounded-md text-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                </div>
+
+                <!-- Phone Input (updated to tel type) -->
+                <div class="mb-2">
+                    <label for="phone" class="block text-lg text-white font-semibold mb-2">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone_number"
+                        pattern="[0-9]{10}"
+                        placeholder="Enter Your Phone Number"
+                        required
+                        class="w-full hover:scale-105 hover:backdrop-blur-3xl transition-all duration-300 p-3 bg-transparent bg-opacity-10 border border-gray-300 rounded-md text-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none overflow-hidden"
+                    />
+                </div>
+
+                <!-- Message Input -->
+                <div class="mb-2">
+                    <label for="message" class="block text-lg text-white font-semibold mb-2">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Enter Your Message"
+                        required
+                        class="w-full hover:scale-105 hover:backdrop-blur-3xl transition-all duration-300 p-3 bg-transparent bg-opacity-5 border border-gray-300 rounded-md text-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    ></textarea>
+                </div>
+                
+                <!-- Submit Button -->
+                <button
+                    type="submit"
+                    class="w-full hover:scale-105 hover:backdrop-blur-3xl transition-all duration-300 p-3 bg-[#076399] hover:bg-[#441752] bg-opacity-10 border border-gray-300 rounded-md text-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none overflow-hidden mt-2"
+                >
+                    Submit
+                </button>
+            </form>
+            <!-- Status Message -->
+            <p id="status" class="text-white text-center mt-2"></p>
+        </div>
+    </div>
+
+     
+      </div>
+    </section>
+
+    
+      <!-- Footer Section  -->
+      <div
+        class="footer w-full px-8 md:px-[80px] bg-gradient-to-tl from-[#252f3d] via-[#111c2f] to-[#0d1438] bg-transparent flex flex-col md:flex-row items-center justify-between text-white backdrop-blur-lg bg-opacity-10 z-50 bottom-0 h-[150px] md:h-[120px] pt-4"
+      >
+        <!-- Left Section -->
+        <div
+          class="left flex flex-col items-center md:items-start justify-start gap-2 w-full md:w-[20%] md:mb-0 md:order-1"
+        >
+          <h3 class="text-xl md:text-md text-center md:text-left">
+            RashidMirdha.In
+          </h3>
+        </div>
+
+        <!-- Middle Section -->
+        <div
+          class="middle flex items-center md:flex-1 justify-center gap-5 w-full md:mb-0 md:order-2"
+        >
+          <button class="text-lg" onclick="scrollToSection('home')">Home</button>
+          <span class="text-4xl">/</span>
+          <button class="text-lg">Blog</button>
+          <span class="text-4xl">/</span>
+          <button class="text-lg">Project</button>
+        </div>
+
+        <!-- Right Section -->
+        <div
+          class="right flex items-center justify-center gap-5 w-full md:w-[20%] md:mb-0 md:order-3"
+        >
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/rashid-mirdha-b49322312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            class="text-2xl transition-transform duration-200 ease-in-out hover:scale-125"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/rashid_mirdha"
+            target="_blank"
+            class="text-2xl transition-transform duration-200 ease-in-out hover:scale-125"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/RashidMirdha"
+            target="_blank"
+            class="text-2xl transition-transform duration-200 ease-in-out hover:scale-125"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <!-- Email -->
+          <a
+            href="mailto:rashidmirdha143@gmail.com"
+            target="_blank"
+            class="text-2xl transition-transform duration-200 ease-in-out hover:scale-125"
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/9678747607"
+            target="_blank"
+            class="text-2xl transition-transform duration-200 ease-in-out hover:scale-125"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+        <div class="flex items-center justify-center py-3 sm:pb-10">
+                   © 2025 rashid_mirdha | All rights reserved
+        </div>
+    </div>
+  </div>
+    
+  <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+ </body>
+</html>
